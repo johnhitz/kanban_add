@@ -45,8 +45,11 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var component = __webpack_require__(1);
+	var app = document.createElement('div');
 
-	document.body.appendChild(component());
+	document.body.appendChild(app);
+
+	app.appendChild(component());
 
 /***/ },
 /* 1 */
@@ -54,9 +57,7 @@
 
 	module.exports = function () {
 	  var element = document.createElement('h1');
-
 	  element.innerHTML = 'Hello world';
-
 	  return element;
 	};
 
